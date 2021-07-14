@@ -1,0 +1,25 @@
+---
+- project:
+    check:
+      jobs:
+        - pure1-ee-build-container-image
+        - pure1-ee-tox-ansible-builder
+    gate:
+      jobs:
+        - pure1-ee-build-container-image
+        - pure1-ee-tox-ansible-builder
+    post:
+      jobs:
+        - pure1-ee-upload-container-image:
+            vars:
+              upload_container_image_promote: false
+    release:
+      jobs:
+        - pure1-ee-upload-container-image:
+            vars:
+              upload_container_image_promote: false
+    periodic:
+      jobs:
+        - pure1-ee-upload-container-image:
+            vars:
+              upload_container_image_promote: false
