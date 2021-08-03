@@ -32,7 +32,7 @@ jobs:
         env:
           DOCKER_BUILDKIT: 1
         run: |
-          tox -e podman --docker --tag=pure1-ee:${{ github.event.release.tag_name }}
+          tox -e podman -- --tag=pure1-ee:${{ github.event.release.tag_name }}
           
       - name: Retag image for navigator usage
         run: |
