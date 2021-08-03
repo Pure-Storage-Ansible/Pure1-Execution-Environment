@@ -36,7 +36,7 @@ jobs:
           
       - name: Retag image for navigator usage
         run: |
-         docker tag pure1-ee:${{ github.event.release.tag_name }} pure1-ee:latest
+         podman tag pure1-ee:${{ github.event.release.tag_name }} pure1-ee:latest
 
       - name: Push pure1-ee
         uses: redhat-actions/push-to-registry@v2.1.1
