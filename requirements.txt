@@ -1,4 +1,3 @@
 git+https://github.com/ansible/ansible-builder.git@devel#egg=ansible-builder
 py-pure-client
-time
 datetime
